@@ -9,14 +9,10 @@ class DatabaseClientt {
 
     private Context mCtx;
     private static DatabaseClientt mnInstance;
-
-    //our app database object
     private AppDatabase appDatabase;
 
     private DatabaseClientt(Context mCtx) {
         this.mCtx = mCtx;
-        //creating the app database with Room database builder
-        //MyToDos is the name of the database
         appDatabase = Room.databaseBuilder(mCtx, AppDatabase.class, "MyToDos").build();
     }
 

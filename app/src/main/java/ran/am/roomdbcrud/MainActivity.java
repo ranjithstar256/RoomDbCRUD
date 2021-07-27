@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
             task.setFinished(false);
 
             //adding to database
-            DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().insert(task);
+           // DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().insert(task);
+            Log.d("2134TAG", "doInBackground: "+DatabaseClientt.getInstance(getApplicationContext()).getAppDatabase().taskDao().getdesktn("goodmorning").getDesc());
             return null;
         }
 
